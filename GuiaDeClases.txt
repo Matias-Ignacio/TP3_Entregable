@@ -1,0 +1,46 @@
+Persona:
+-nombre         (string)
+-apellido       (string)
+-dni            (int)
+-telefono       (int)
+-------------------------------------
+Responsable:
+-idEmpleado     (int)
+-licencia       (string)
+-objPersona     (objPersona)
+-------------------------------------
+Pasajero:
+-objPersona     (objPersona)
+-nroAsiento     (int)
+-nroTicket      (int)
+boolean = darPorcentajeIncremento()
+-------------------------------------
+PasajeroEsp:
+parent::Pasajero
+-opcUno         (boolean)
+-opcDos         (boolean)
+-opcTres        (boolean)
+boolean = darPorcentajeIncremento()
+-------------------------------------
+PasajeroVip:
+parent::Pasajero
+-nroViajeroFrecuente    (int)
+-cantMillas             (int)
+boolean = darPorcentajeIncremento()
+--------------------------------------
+Viaje:
+-codigo         (int)
+-destino        (string)
+-responsable    (objPersona)
+-maxCPas        (int)
+-colPasajeros   (array Pasajero)
+-costoPasaje    (int)
+-costoTotal     (int)
+agregarPasajero(Pasajero)
+(int) = cantPasajeros()
+modificarViaje(int, string, Responsable, int, int)
+boolean = hayPasajeros
+boolean = existePasajero(Pasajero)
+boolean = borrarPasajero(int)
+boolean = hayPasajeDisponible()
+(int) = venderPasaje(Pasajero)
